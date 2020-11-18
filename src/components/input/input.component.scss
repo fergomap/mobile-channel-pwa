@@ -1,0 +1,56 @@
+.input-component {
+    .error {
+        color: red;
+        display: block;
+        margin: 5px 0;
+    }
+
+    .input-wrapper {
+        position: relative;
+        margin: 20px 0 10px;
+
+        input {
+            display: block;
+            padding: 10px 5px;
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing: border-box;
+            border-bottom: 1px solid lightgray;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+
+            &:focus {
+                border-color: #1769c2;
+                outline: none;
+            }
+        }
+
+        label {
+            display: block;
+            position: absolute;
+            opacity: 0;
+            left: 5px;
+            bottom: 1.3rem;
+            color: #5d5d5d;
+            transition: 0.2s ease-in-out transform;
+            font-size: 12px;
+        }
+
+        input:placeholder-shown + label {
+            visibility: hidden;
+            z-index: -1;
+            transition: 0.2s ease-in-out;
+        }
+
+        input:not(:placeholder-shown) + label,
+        input:focus:not(:placeholder-shown) + label {
+            visibility: visible;
+            z-index: 1;
+            opacity: 1;
+            transform: translateY(-10px);
+            transition: 0.2s ease-in-out transform;
+        }
+    }
+}

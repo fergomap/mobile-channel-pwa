@@ -6,21 +6,30 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
-    "@types/jest": "^26.0.15",
     "@types/node": "^12.19.5",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
+    "firebase": "^8.0.2",
+    "jest": "^26.6.0",
+    "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-element-spinner": "^1.0.4",
+    "react-hook-form": "^6.11.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "ts-jest": "^26.4.4",
     "typescript": "^4.0.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "npm run build && firebase deploy --only hosting",
+    "lint": "eslint -c .eslintrc.json src --ext .tsx",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +48,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@types/jest": "^26.0.15",
+    "@types/react-router-dom": "^5.1.6",
+    "@typescript-eslint/parser": "^4.8.1",
+    "babel-jest": "^26.6.3",
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.7.0",
+    "eslint": "^7.13.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-cli": "^26.6.3",
+    "mutationobserver-shim": "^0.3.7",
+    "synchronous-promise": "^2.0.15"
   }
 }

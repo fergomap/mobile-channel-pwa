@@ -1,0 +1,18 @@
+{
+    "env": {
+        "test": {
+            "presets": [
+                "@babel/typescript",
+                "@babel/react",
+                "@babel/env"
+            ],
+            "plugins": [
+                "dynamic-import-node",
+                ["@babel/plugin-proposal-decorators", { "legacy": true }],
+                ["@babel/plugin-proposal-class-properties", { "loose": true }],
+                "@babel/syntax-dynamic-import",
+                "@babel/plugin-transform-runtime"
+            ]
+        }
+    }
+}
