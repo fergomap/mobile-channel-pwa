@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import DateDiff from './date-diff';
 
 export default class DateDiffImp implements DateDiff {

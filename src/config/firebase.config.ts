@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 const FIREBASE_CONFIG: Object = {
     apiKey: 'AIzaSyBNS559j8oTc5HTTW7Eh9QVYv8HKO9HtZg',
     authDomain: 'mobile-channel-pwa.firebaseapp.com',

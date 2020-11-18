@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 interface AppConfig {
     ROUTES: {
         HOME: string;

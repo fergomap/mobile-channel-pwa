@@ -6,6 +6,6 @@ module.exports = {
     },
     setupFiles: ['core-js'],
     setupFilesAfterEnv: [
-        '<rootDir>/src/tests/tests-setup.tsx'
+        '<rootDir>/src/tests/tests-setup.ts'
     ]
 };

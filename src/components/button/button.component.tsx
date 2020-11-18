@@ -8,7 +8,7 @@ interface ButtonComponentProps {
 }
 
 const ButtonComponent: FunctionComponent<ButtonComponentProps> = ({ label, onClick, type }): ReactElement => {
-    return <button className="button-component" type={type} onClick={() => onClick && onClick()}>
+    return <button className="button-component" type={type} onClick={() => onClick && onClick()} data-testid="button">
         { label }
     </button>;
 }
