@@ -17,6 +17,14 @@ PWA developed with React + Typescript + Firebase. It allows the user to log in, 
 
 The project is hosted at https://mobile-channel-pwa.firebaseapp.com.
 
+# Users to test the project
+
+| Email | Password |
+| - | - |
+| test@gmail.com | password |
+| test2@gmail.com | password |
+| test3@gmail.com | password |
+
 # Set up
 
 ```
