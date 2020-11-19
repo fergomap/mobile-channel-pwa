@@ -9,7 +9,7 @@ interface CounterComponentProps {
 const CounterComponent: FunctionComponent<CounterComponentProps> = ({ count, label }): ReactElement => {
     return <div className="counter-component">
         <p className="counter">{ String(count).padStart(2, '0') }</p>
-        <p>{ label }</p>
+        <p className="counter-label">{ label }</p>
     </div>;
 }
 

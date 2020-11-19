@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react';
-import './input.component.scss';
 import { ValidationRules } from 'react-hook-form';
+import './input.component.scss';
 
 interface InputComponentProps {
     error?: string;
@@ -14,8 +14,8 @@ interface InputComponentProps {
 const InputComponent: FunctionComponent<InputComponentProps> = ({ error, field, label, register, rules, type }): ReactElement => {
     return <div className="input-component">
         <div className="input-wrapper">
-            <input placeholder={label} type={type} name={field} ref={register(rules)} data-testid="input" />
-            <label>{ label }</label>
+            <input className="input" placeholder={label} type={type} name={field} ref={register(rules)} data-testid="input" />
+            <label className="input-label">{ label }</label>
         </div>
         { error && <small className="error">{ error }</small>}
     </div>;

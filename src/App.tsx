@@ -1,11 +1,11 @@
 import React, { FunctionComponent, ReactElement, useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import { APP_CONSTANTS } from 'config/app.config';
-import HomeComponent from 'views/home/home.component';
-import LogInComponent from 'views/log-in/log-in.component';
 import app from 'firebase/app';
 import 'firebase/auth';
 import { SpinnerComponent } from 'react-element-spinner';
+import { APP_CONSTANTS } from 'config/app.config';
+import HomeComponent from 'views/home/home.component';
+import LogInComponent from 'views/log-in/log-in.component';
 
 const App: FunctionComponent = (): ReactElement => {
     const [ user, setUser ] = useState<app.User | null>();

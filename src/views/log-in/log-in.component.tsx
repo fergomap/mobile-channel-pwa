@@ -1,11 +1,11 @@
 import React, { FunctionComponent, ReactElement, useState } from 'react';
-import './log-in.component.scss';
-import ButtonComponent from 'components/button/button.component';
 import { useForm } from 'react-hook-form';
+import { SpinnerComponent } from 'react-element-spinner';
+import ButtonComponent from 'components/button/button.component';
 import InputComponent from 'components/input/input.component';
 import { FORM_CONSTANTS } from 'config/form.config';
 import { firebaseLogIn } from 'services/auth.service';
-import { SpinnerComponent } from 'react-element-spinner';
+import './log-in.component.scss';
 
 interface LogInFormData {
 	email: string,
@@ -27,7 +27,7 @@ const LogInComponent: FunctionComponent = (): ReactElement => {
 
     return <section className="log-in-component">
         { loading && <SpinnerComponent loading={true} position="global"/> }
-        <img alt="lock" src={`${process.env.PUBLIC_URL}/lock.png`} />
+        <img className="lock-img" alt="lock" src={`${process.env.PUBLIC_URL}/lock.png`} />
         <form className="form-container" noValidate={true} onSubmit={handleSubmit(logIn)} data-testid="form">
             <InputComponent error={errors.email?.message} field="email" label="Email" register={register} rules={FORM_CONSTANTS.VALIDATION_RULES.EMAIL} type="email" />
             <InputComponent error={errors.password?.message} field="password" label="Password" register={register} rules={FORM_CONSTANTS.VALIDATION_RULES.PASSWORD} type="password" />
