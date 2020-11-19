@@ -20,6 +20,10 @@
             width: 80vw;
         }
 
+        @media (min-width: 760px) and (max-width: 1024px) {
+            width: 50vw;
+        }
+
         .auth-error {
             color: #721c24;
             background-color: #f8d7da;

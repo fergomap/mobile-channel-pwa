@@ -6,10 +6,14 @@
     min-height: 100vh;
 
     .container {
-        width: 20vw;
+        width: 30vw;
 
         @media (max-width: 768px) {
             width: 90vw;
+        }
+
+        @media (min-width: 760px) and (max-width: 1024px) {
+            width: 50vw;
         }
 
         h1 {
