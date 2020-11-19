@@ -14,7 +14,7 @@ interface InputComponentProps {
 const InputComponent: FunctionComponent<InputComponentProps> = ({ error, field, label, register, rules, type }): ReactElement => {
     return <div className="input-component">
         <div className="input-wrapper">
-            <input placeholder={label} type={type} name={field} ref={register(rules)} />
+            <input placeholder={label} type={type} name={field} ref={register(rules)} data-testid="input" />
             <label>{ label }</label>
         </div>
         { error && <small className="error">{ error }</small>}

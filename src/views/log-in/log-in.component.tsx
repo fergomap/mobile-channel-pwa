@@ -28,7 +28,7 @@ const LogInComponent: FunctionComponent = (): ReactElement => {
     return <section className="log-in-component">
         { loading && <SpinnerComponent loading={true} position="global"/> }
         <img alt="lock" src={`${process.env.PUBLIC_URL}/lock.png`} />
-        <form className="form-container" noValidate={true} onSubmit={handleSubmit(logIn)}>
+        <form className="form-container" noValidate={true} onSubmit={handleSubmit(logIn)} data-testid="form">
             <InputComponent error={errors.email?.message} field="email" label="Email" register={register} rules={FORM_CONSTANTS.VALIDATION_RULES.EMAIL} type="email" />
             <InputComponent error={errors.password?.message} field="password" label="Password" register={register} rules={FORM_CONSTANTS.VALIDATION_RULES.PASSWORD} type="password" />
             <ButtonComponent label="Log In" type="submit"/>

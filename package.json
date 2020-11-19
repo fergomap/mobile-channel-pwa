@@ -29,7 +29,10 @@
     "lint": "eslint -c .eslintrc.json src --ext .tsx",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "test:coverage": "npm run test -- --coverage"
+    "test:coverage": "npm run test -- --coverage",
+    "cypress:start:app": "BROWSER=none react-scripts -r @cypress/instrument-cra start",
+    "cypress:start:wait": "start-server-and-test cypress:start:app http://localhost:3000",
+    "cypress:open": "npm run cypress:start:wait -- \"cypress open\""
   },
   "eslintConfig": {
     "extends": [
@@ -54,16 +57,20 @@
     "@babel/plugin-proposal-decorators": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
+    "@cypress/code-coverage": "^3.8.3",
+    "@cypress/instrument-cra": "^1.4.0",
     "@types/jest": "^26.0.15",
     "@types/react-router-dom": "^5.1.6",
     "@typescript-eslint/parser": "^4.8.1",
     "babel-jest": "^26.6.3",
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.7.0",
+    "cypress": "^5.6.0",
     "eslint": "^7.13.0",
     "identity-obj-proxy": "^3.0.0",
     "jest-cli": "^26.6.3",
     "mutationobserver-shim": "^0.3.7",
+    "start-server-and-test": "^1.11.5",
     "synchronous-promise": "^2.0.15"
   }
 }
