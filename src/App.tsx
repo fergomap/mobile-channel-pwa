@@ -4,6 +4,7 @@ import { APP_CONSTANTS } from 'config/app.config';
 import HomeComponent from 'views/home/home.component';
 import LogInComponent from 'views/log-in/log-in.component';
 import app from 'firebase/app';
+import 'firebase/auth';
 import { SpinnerComponent } from 'react-element-spinner';
 
 const App: FunctionComponent = (): ReactElement => {

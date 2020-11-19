@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import 'firebase';
 import app from 'firebase/app';
 import FIREBASE_CONFIG from './config/firebase.config';
 
